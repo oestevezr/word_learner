@@ -10,6 +10,10 @@ export type WordCategory =
   | 'Business'
   | 'Tech'
   | 'Collocations'
+  | 'Travel'
+  | 'Health'
+  | 'Environment'
+  | 'Food & Cooking'
 
 // ─── A sentence with a blank ─────────────────────────────────────────────────
 export interface Sentence {

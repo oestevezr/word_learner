@@ -2,18 +2,8 @@ import { useState } from 'react'
 import { useAppStore } from '@/store/useAppStore'
 import { words } from '@/data/words'
 import type { WordCategory, CefrLevel, WordStatus } from '@/types'
+import { ALL_CATEGORIES, ALL_LEVELS, ALL_STATUSES, STATUS_LABEL as statusLabel, STATUS_CLASS as statusClass } from '@/data/constants'
 import { Search, Heart, SlidersHorizontal, X } from 'lucide-react'
-
-const ALL_CATEGORIES: WordCategory[] = ['Daily Life', 'Idioms', 'Phrasal Verbs', 'Academic', 'Business', 'Tech', 'Collocations']
-const ALL_LEVELS: CefrLevel[] = ['A2', 'B1', 'B2', 'C1', 'C2']
-const ALL_STATUSES: WordStatus[] = ['new', 'learning', 'mastered']
-
-const statusLabel: Record<WordStatus, string> = { new: 'New', learning: 'Learning', mastered: 'Mastered' }
-const statusClass: Record<WordStatus, string> = {
-  new: 'status-new',
-  learning: 'status-learning',
-  mastered: 'status-mastered'
-}
 
 export default function WordBank() {
   const records = useAppStore((s) => s.records)

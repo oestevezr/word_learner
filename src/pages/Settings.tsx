@@ -1,11 +1,10 @@
 import { useState } from 'react'
 import { useAppStore } from '@/store/useAppStore'
 import type { CefrLevel, WordCategory } from '@/types'
+import { ALL_CATEGORIES, ALL_LEVELS } from '@/data/constants'
 import { AlertTriangle } from 'lucide-react'
 
 const DAILY_GOAL_OPTIONS = [5, 10, 15, 20, 30]
-const ALL_LEVELS: CefrLevel[] = ['A2', 'B1', 'B2', 'C1', 'C2']
-const ALL_CATEGORIES: WordCategory[] = ['Daily Life', 'Idioms', 'Phrasal Verbs', 'Academic', 'Business', 'Tech', 'Collocations']
 
 export default function Settings() {
   const settings = useAppStore((s) => s.settings)
