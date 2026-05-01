@@ -1,7 +1,8 @@
 import { NavLink } from 'react-router-dom'
-import { BookOpen, BarChart2, List, Settings } from 'lucide-react'
+import { Home, BookOpen, BarChart2, List, Settings } from 'lucide-react'
 
 const tabs = [
+  { to: '/', icon: Home, label: 'Home' },
   { to: '/practice', icon: BookOpen, label: 'Practice' },
   { to: '/progress', icon: BarChart2, label: 'Progress' },
   { to: '/wordbank', icon: List, label: 'Words' },
@@ -16,6 +17,7 @@ export default function Navbar() {
           <NavLink
             key={to}
             to={to}
+            end={to === '/'}
             className={({ isActive }) =>
               `flex flex-col items-center gap-0.5 px-4 py-2 text-xs font-medium transition-colors ${
                 isActive ? 'text-accent-500' : 'text-gray-400 hover:text-gray-600'

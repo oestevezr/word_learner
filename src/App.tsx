@@ -1,5 +1,6 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from '@/components/Navbar'
+import Home from '@/pages/Home'
 import Practice from '@/pages/Practice'
 import Progress from '@/pages/Progress'
 import WordBank from '@/pages/WordBank'
@@ -11,7 +12,7 @@ export default function App() {
       <div className="flex flex-col min-h-dvh max-w-[480px] mx-auto">
         <main className="flex-1 pb-20">
           <Routes>
-            <Route path="/" element={<Navigate to="/practice" replace />} />
+            <Route path="/" element={<Home />} />
             <Route path="/practice" element={<Practice />} />
             <Route path="/progress" element={<Progress />} />
             <Route path="/wordbank" element={<WordBank />} />
